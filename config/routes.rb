@@ -1,7 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :comments
-
-  map.resources :articles
+ 
+  map.resources :articles do |article|
+    article.resources :comments
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
 

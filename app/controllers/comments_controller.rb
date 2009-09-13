@@ -1,27 +1,34 @@
 class CommentsController < ApplicationController
   def index
-    @comments = Comment.all
+    @article = Article.find(params[:article_id])
+    @comments = @article.comments
   end
   
   def show
+    @article = Article.find(params[:article_id])
     @comment = Comment.find(params[:id])
   end
   
   def new
+	@article = Article.find(params[:article_id])
     @comment = Comment.new
+	@comment.article = @article
   end
   
   def create
+    @article = Article.find(params[:article_id])
     @comment = Comment.new(params[:comment])
+	@comment.article = @article
     if @comment.save
       flash[:notice] = "Successfully created comment."
-      redirect_to @comment
+      redirect_to article_path(@article)
     else
       render :action => 'new'
     end
   end
   
   def edit
+    @article = Article.find(params[:article_id])
     @comment = Comment.find(params[:id])
   end
   
@@ -29,7 +36,7 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     if @comment.update_attributes(params[:comment])
       flash[:notice] = "Successfully updated comment."
-      redirect_to @comment
+      redirect_to article_url(@comment.article_id)
     else
       render :action => 'edit'
     end
@@ -39,6 +46,6 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
     flash[:notice] = "Successfully destroyed comment."
-    redirect_to comments_url
+    redirect_to article_url(@comment.article_id)
   end
 end
