@@ -84,3 +84,11 @@ a {
 float: right;
 font-size: 12px;
 }
+
+input#user_openid_identifier, input#user_session_openid_identifier {
+	background: url(http://openid.net/images/login-bg.gif) no-repeat;
+	bacjground-color: #fff;
+	background-position: 0 50%;
+	color: #000;
+	padding-left: 18px;
+}
