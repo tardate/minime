@@ -1,9 +1,10 @@
 <%= error_messages_for :comment %>
 
-<%= f.hidden_field :article_id %>
+<% form_for [ @article, @comment ] do |f| -%>
+
   <p>
     <%= f.label :description %><br />
-    <%= f.text_field :description %>
+    <%= f.text_area :description %>
   </p>
   <p><%= f.submit submit_name %></p>
-
+<% end %>
