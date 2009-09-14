@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   
   def show
     @article = Article.find(params[:id])
+	@article.revert_to(params[:version].to_i) if params[:version]
   end
   
   def new

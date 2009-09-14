@@ -16,6 +16,13 @@
 <p>
 
   <%= link_to "Edit", edit_article_path(@article) %> |
+  Version <%= @article.version %>
+  <% if @article.version > 1 %>
+	: <%= link_to "Previous version", :version => @article.version-1%>
+  <% end %>
+  <% if params[:version] %>
+	: <%= link_to "Latest version", :version => nil %>
+  <% end %> |
   <%= link_to "Destroy", @article, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All Articles", :articles %>
 </p>
