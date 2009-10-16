@@ -1,2 +1,16 @@
-Use this README file to introduce your application and point to useful places in the API for learning more.
-Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+= formtastic-sample Rails Application
+
+http://github.com/justinfrench/formtastic
+
+== Installation
+
+	$ rake gems:install
+	$ rake db:migrate
+	
+	$ ruby script/generate formtastic
+	-- fails in 0.2.5
+	
+	$ ruby script/generate formtastic_stylesheets
+      exists  public/stylesheets
+      create  public/stylesheets/formtastic.css
+      create  public/stylesheets/formtastic_changes.css

@@ -1,12 +1,9 @@
-<% form_for @article do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p><%= f.submit "Submit" %></p>
-<% end %>
+
+  <% semantic_form_for @article do |form| %>
+    <%= form.input :name,      :input_html => { :size => 60 } %>
+    <%= form.input :description,       :input_html => { :class => 'autogrow' } %>
+    <%= form.input :created_at, :input_html => { :disabled => true } %>
+    <%= form.buttons %>
+  <% end %>
+
+
