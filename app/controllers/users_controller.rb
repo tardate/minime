@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   
 	def update
 		@user = current_user
-		@user.atributes = params[:user]
+		@user.attributes = params[:user]
 		@user.save do  |result|
 			if result
 				flash[:notice] = "Successfully updated user."

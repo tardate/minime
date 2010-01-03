@@ -8,6 +8,8 @@ class UserSessionsController < ApplicationController
 		@user_session.save do |result|
 			if result
 				flash[:notice] = "Successfully signed in."
+				#s = UserSession.find
+				#RAILS_DEFAULT_LOGGER.info "UserSession.find = #{s.inspect}"
 				redirect_to articles_path
 			else
 				render :action => 'new'
@@ -16,7 +18,7 @@ class UserSessionsController < ApplicationController
 	end
 
 	def destroy
-		@user_session = UserSession.find(params[:id])
+		@user_session = UserSession.find
 		@user_session.destroy
 		flash[:notice] = "Successfully signed out."
 		redirect_to articles_path
