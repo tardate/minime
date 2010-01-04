@@ -1,3 +1,27 @@
+== Rich Text Editors Testing/Demonstration
+
+* TinyMCE
+  * http://tinymce.moxiecode.com/index.php
+  * http://localhost:3000/articles/1/edit?editor=tinymce
+
+* widgEditor
+  * http://www.themaninblue.com/experiment/widgEditor/
+  * http://localhost:3000/widgeditor_example.htm
+
+
+http://code.google.com/p/punymce/
+http://ckeditor.com/
+http://developer.yahoo.com/yui/editor/
+
+
+
+
+
+
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create 

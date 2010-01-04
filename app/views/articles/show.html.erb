@@ -6,7 +6,7 @@
 </p>
 <p>
   <strong>Description:</strong>
-  <%=h @article.description %>
+  <%= @article.description %>
 </p>
 
 <p>
@@ -16,6 +16,7 @@
 <p>
 
   <%= link_to "Edit", edit_article_path(@article) %> |
+  <%= link_to "Edit (TinyMCE)", edit_article_path(@article, :editor => "tinymce") %> |
   <%= link_to "Destroy", @article, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All Articles", :articles %>
 </p>

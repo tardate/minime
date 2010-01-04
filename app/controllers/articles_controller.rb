@@ -23,6 +23,9 @@ class ArticlesController < ApplicationController
   
   def edit
     @article = Article.find(params[:id])
+    if params[:editor]
+      render :template => "articles/edit_#{params[:editor]}"
+    end
   end
   
   def update

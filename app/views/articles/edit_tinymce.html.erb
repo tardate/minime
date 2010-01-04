@@ -1,0 +1,10 @@
+<% title "Edit Article" %>
+
+<% use_tinymce -%>
+
+<%= render :partial => 'form' %>
+
+<p>
+  <%= link_to "Show", @article %> |
+  <%= link_to "View All", articles_path %>
+</p>
