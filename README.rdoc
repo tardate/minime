@@ -2,12 +2,17 @@
 
 * TinyMCE
   * http://tinymce.moxiecode.com/index.php
+  * http://ricroberts.com/articles/tinymce-wysiwyg-text-editor-on-rails
   * http://localhost:3000/articles/1/edit?editor=tinymce
 
 * widgEditor
   * http://www.themaninblue.com/experiment/widgEditor/
   * http://localhost:3000/widgeditor_example.htm
 
+
+
+* white_list plugin for HTML sanitization
+  * http://svn.techno-weenie.net/projects/plugins/white_list/
 
 http://code.google.com/p/punymce/
 http://ckeditor.com/
